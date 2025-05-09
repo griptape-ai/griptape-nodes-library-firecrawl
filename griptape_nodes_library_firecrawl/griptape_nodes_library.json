@@ -1,0 +1,53 @@
+{
+  "name": "Firecrawl Library",
+  "library_schema_version": "0.1.0",
+  "settings": [
+    {
+      "description": "Firecrawl Settings",
+      "category": "nodes.Firecrawl",
+      "contents": {
+        "FIRECRAWL_API_KEY": "$FIRECRAWL_API_KEY"
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Griptape",
+    "description": "Nodes for interacting with the Firecrawl API",
+    "library_version": "0.1.0",
+    "engine_version": "0.32.0",
+    "tags": [
+      "Griptape",
+      "AI",
+      "Firecrawl",
+      "Web Scraping",
+      "Web Crawling"
+    ],
+    "dependencies": {
+      "pip_dependencies": [
+        "griptape-nodes",
+        "firecrawl"
+      ]
+    }
+  },
+  "categories": [
+    {
+      "Firecrawl": {
+        "color": "border-green-500",
+        "title": "Firecrawl",
+        "description": "Firecrawl is a web crawling and scraping API that allows you to extract data from websites.",
+        "icon": "Camera"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "class_name": "FirecrawlCrawler",
+      "file_path": "firecrawl_crawler.py",
+      "metadata": {
+        "category": "Firecrawl",
+        "description": "Crawl a website and extract data using Firecrawl.",
+        "display_name": "Firecrawl Crawler"
+      }
+    }
+  ]
+}
