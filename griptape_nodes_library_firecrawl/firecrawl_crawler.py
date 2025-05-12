@@ -70,7 +70,7 @@ class FirecrawlCrawler(DataNode):
         self.append_value_to_parameter("logs", "Crawling completed.\n")
 
         # Set the output
-        text = [self._format_data(data) for data in crawl_result.data]
+        text = "\n\n".join([self._format_data(data) for data in crawl_result.data])
 
         self.parameter_output_values["output"] = text
 
