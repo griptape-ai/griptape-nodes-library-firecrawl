@@ -1,9 +1,9 @@
 [project]
-name = "griptape_nodes_library_firecrawl"
+name = "griptape-nodes-library-firecrawl"
 version = "0.1.0"
 description = "A Griptape Nodes library for Firecrawl"
 authors = [{ name = "Collin Dutter", email = "collin@griptape.ai" }]
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = ["griptape-nodes", "firecrawl"]
 
 [build-system]
