@@ -30,6 +30,17 @@ class FirecrawlCrawler(DataNode):
 
         self.add_parameter(
             Parameter(
+                name="crawl_depth_limit",
+                default_value=10,
+                input_types=["int"],
+                type="int",
+                allowed_modes={ParameterMode.PROPERTY, ParameterMode.INPUT},
+                tooltip="crawl_depth_limit",
+            )
+        )
+
+        self.add_parameter(
+            Parameter(
                 name="output",
                 type="str",
                 output_type="str",
@@ -64,7 +75,7 @@ class FirecrawlCrawler(DataNode):
         self.append_value_to_parameter("logs", "Crawling...\n")
         crawl_result = yield lambda: self.app.crawl_url(
             self.parameter_values["website"],
-            limit=10,
+            limit=int(self.parameter_values["crawl_depth_limit"]),
             scrape_options=ScrapeOptions(formats=["markdown"]),
         )
         self.append_value_to_parameter("logs", "Crawling completed.\n")
