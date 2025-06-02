@@ -1,6 +1,6 @@
 # Firecrawl Node for Griptape Nodes 
 
-This library provides a node for interacting with the Firecrawl API. Firecrawl is a popular service that provides web scraping and crawl capabilities. Learn more at [firecrawl.dev](https://firecrawl.dev).
+This library provides a node for interacting with the Firecrawl API. Firecrawl is a popular service that provides web scraping and crawling capabilities. Learn more at [firecrawl.dev](https://firecrawl.dev).
 
 ## Features
 
@@ -55,7 +55,7 @@ If you haven't already installed your Griptape Nodes engine, follow the installa
 2. Add the complete path to the `griptape_nodes_library.json` file within this `griptape-nodes-library-firecrawl/griptape_nodes_library_firecrawl` directory to the empty field at the bottom of the *Libraries To Register* section.
 3. Exit out of settings. The new path will save automatically
 4. Refresh the libraries in your editor by clicking *Refresh Libraries* at the bottom of the left hand Nodes panel.
-5. You should see the Firecrawl category appear in the Nodes panel. Expand this category to see the Firecrawl node and drag the node onto the edit canvas to create and instance of this node.
+5. You should see the Firecrawl category appear in the Nodes panel. Expand this category to see the Firecrawl node and drag the node onto the edit canvas to create an instance of this node.
 
 
 ## License
