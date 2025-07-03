@@ -67,7 +67,7 @@ class FirecrawlCrawler(DataNode):
                 allowed_modes={ParameterMode.OUTPUT},
             )
 
-        logs_group.ui_options = {"hide": True}  # Hide the logs group by default.
+        logs_group.ui_options = {"collapsed": True}  # Hide the logs group by default.
 
         self.add_node_element(logs_group)
 
