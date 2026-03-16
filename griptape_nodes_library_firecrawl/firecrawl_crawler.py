@@ -1,9 +1,9 @@
-from firecrawl import FirecrawlApp, ScrapeOptions
-from typing import Callable, Generator
+from collections.abc import Callable, Generator
 from textwrap import dedent
 
+from firecrawl import FirecrawlApp, ScrapeOptions
 from firecrawl.firecrawl import CrawlStatusResponse, FirecrawlDocument
-from griptape_nodes.exe_types.core_types import Parameter, ParameterMode, ParameterGroup
+from griptape_nodes.exe_types.core_types import Parameter, ParameterGroup, ParameterMode
 from griptape_nodes.exe_types.node_types import DataNode
 
 
@@ -12,9 +12,7 @@ class FirecrawlCrawler(DataNode):
 
     def __init__(self, name: str, metadata: dict | None = None) -> None:
         super().__init__(name, metadata)
-        self.app = FirecrawlApp(
-            api_key=self.get_config_value("Firecrawl", "FIRECRAWL_API_KEY")
-        )
+        self.app = FirecrawlApp(api_key=self.get_config_value("Firecrawl", "FIRECRAWL_API_KEY"))
 
         self.add_parameter(
             Parameter(
